@@ -1,0 +1,333 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  ::before,
+  ::after,
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Container */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+  
+  /* Intro */
+  .intro {
+      /* Блок по центру */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    width: 100%;
+    height: 100vh;
+    background-color: #302828;
+    background: url("img/intro_01.jpg") center no-repeat;
+    background-size: cover;
+  }
+  
+  .intro__inner {
+    width: 100%;
+    min-width: 880px;
+    margin: 0 auto;
+  
+    text-align: center;
+  }
+  
+  .intro__title {
+    color: #fff;
+    font-size: 120px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  
+  .intro__title:after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: #fff;
+      margin: 30px  auto ;
+  
+  }
+  
+  .intro__suptitle {
+    font-size: 48px;
+    color: #fff;
+    font-family: "Kaushan Script", cursive;
+    margin-bottom: 20px;
+  }
+  
+  
+  
+  /* Header */
+  .header {
+    padding-top: 30px;
+    width: 100%;
+    position: absolute;
+  
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100%;
+  }
+  
+  .header__inner {
+    display: flex;
+    justify-content: space-between;
+  
+    align-items: center;
+  }
+  
+  .header__logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  /* Nav */
+  .nav {
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  .nav__link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+  
+    color: #fff;
+    text-decoration: none;
+  
+    transition: 0.2s linear;
+  }
+  
+  .nav__link::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    display: none;
+  
+    background-color: #fce38a;
+  
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .nav__link:hover {
+    color: #fce38a;
+  }
+  
+  .nav__link:hover::after {
+    display: block;
+  }
+  
+  /* 25:25 */
+  
+  
+  /* Button */
+  
+  .btn {
+      display: inline-block;
+      font-weight: bold;
+      font-size: 14px;
+      color: #fff;
+      border: 3px solid #fff;
+      padding: 8px 30px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: .1s linear, color .1s linear;
+  }
+  
+  .btn:hover {
+      background-color: #fff;
+      color: #333;
+  }
+  
+  /* Slider */
+  .slider {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 70px;
+      margin-bottom: -100px;
+  }
+  
+  .slider__item {
+      width: 23%;
+      color: #fff;
+      position: relative;
+      text-align: center;
+      font-size: 18px;
+      text-transform: uppercase;
+      padding: 40px 0;
+      border-top: 3px solid #fff;
+      opacity: 0.5;
+  }
+  
+  .slider__item.active {
+      opacity: 1;
+  }
+  
+  .slider__item.active::before {
+      display: block;
+      content: "";
+      background-color: red;
+      width: 70px;
+      height: 3px;
+      position: absolute;
+      top: -3px;
+      left: 0;
+      z-index: 1;
+  }
+  
+  .slider__num {
+      font-size: 24px;
+      font-weight: bold;
+  }
+  
+
+/* Я */
+/* About */
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 640px;
+    background-color: #fff;
+    
+}
+
+.about__inner {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.about__suptitle {
+    font-size: 24px;
+    font-family: "Kaushan Script", cursive;
+    color: #333;
+}
+
+.about__title {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 30px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    
+}
+
+.about__title::after {
+    content: "";
+    display: block;
+    background-color: #f38181;
+    width: 60px;
+    height: 3px;
+    position: absolute;
+    z-index: 1;
+    margin: 20px 100px;
+}
+
+.about__text {
+    font-size: 15px;
+    color: #b3b3b3;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 35px; 
+    /* ??? */
+}
+
+/* Photo */
+
+.about__photo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.photo__item {
+    position: relative;
+    width: 380px;
+    height: 250px;
+}
+
+.photo__item.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #95e1d3;
+    top: 0;
+}
+/* Доделать */
+
+.text__photo__about {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Точное центрирование */
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* About line */
+.about__line {
+    background-color: #95e1d3;
+    max-width: 1920px;
+    width: 100%;
+    height: 200px;
+    margin-bottom: -137px;
+    display: flex;
+    flex-direction: space-between;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+
+.line__num {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.line__item {
+    width: 18%;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-left: 0.2px solid #fff;
+    border-right: 0.2px solid #fff;
+
+}
+
+
+
